@@ -14,7 +14,7 @@ class AsteroidsListViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Армагеддон 2022"
+        navigationItem.title = "Армагеддон 2022"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

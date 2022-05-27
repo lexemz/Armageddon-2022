@@ -17,11 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         window?.makeKeyAndVisible()
         
-        let flowLayout = UICollectionViewLayout()
-        let asteroidsListVC = AsteroidsListViewController(collectionViewLayout: flowLayout)
-        let navigationController = UINavigationController(rootViewController: asteroidsListVC)
+        let mainTabBarController = MainMabBarController()
         
-        window?.rootViewController = navigationController
+        window?.rootViewController = mainTabBarController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

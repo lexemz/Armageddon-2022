@@ -12,6 +12,7 @@
 		78346109284163A50072BE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78346108284163A50072BE03 /* Assets.xcassets */; };
 		7834610C284163A50072BE03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7834610A284163A50072BE03 /* LaunchScreen.storyboard */; };
 		783461182841651A0072BE03 /* AsteroidsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783461172841651A0072BE03 /* AsteroidsListViewController.swift */; };
+		7834611A284168030072BE03 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78346119284168030072BE03 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7834610B284163A50072BE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7834610D284163A50072BE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		783461172841651A0072BE03 /* AsteroidsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsListViewController.swift; sourceTree = "<group>"; };
+		78346119284168030072BE03 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		783460FE284163A30072BE03 /* Armageddon 2022 */ = {
 			isa = PBXGroup;
 			children = (
+				78346119284168030072BE03 /* MainTabBarController.swift */,
 				78346116284165000072BE03 /* ViewControllers */,
 				78346115284164E60072BE03 /* Resources */,
 				78346114284164DD0072BE03 /* Storyboards */,
@@ -168,6 +171,7 @@
 			files = (
 				783461182841651A0072BE03 /* AsteroidsListViewController.swift in Sources */,
 				78346100284163A30072BE03 /* AppDelegate.swift in Sources */,
+				7834611A284168030072BE03 /* MainTabBarController.swift in Sources */,
 				78346102284163A30072BE03 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
