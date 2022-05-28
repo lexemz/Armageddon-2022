@@ -9,7 +9,17 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+enum MeasureUnite {
+    case kilometers
+    case lunarOrbits
+}
+
 class AsteroidsListViewController: UICollectionViewController {
+    private var dangerOnly = false
+    private var measureUnits: MeasureUnite = .kilometers
+
+    private var filterMenuButton: UIBarButtonItem!
+
     init() {
         let layout = UICollectionViewLayout()
         super.init(collectionViewLayout: layout)
@@ -32,17 +42,54 @@ class AsteroidsListViewController: UICollectionViewController {
 
     private func setupFilterButtion() {
         let filterImage = UIImage(systemName: "line.3.horizontal.decrease")
-        let filterBarButton = UIBarButtonItem(
+        filterMenuButton = UIBarButtonItem(
+            title: "",
             image: filterImage,
-            style: .plain,
-            target: self,
-            action: #selector(filterButtonTapped)
+            primaryAction: nil,
+            menu: generateFilterPullDownMenu()
         )
-        navigationItem.rightBarButtonItem = filterBarButton
+        navigationItem.rightBarButtonItem = filterMenuButton
     }
 
-    @objc private func filterButtonTapped() {
-        print(1)
+    private func generateFilterPullDownMenu() -> UIMenu {
+        let dangerAsteroids = UIAction(
+            title: "Только опасные",
+            image: UIImage(systemName: "flame"),
+            state: dangerOnly ? .on : .off,
+            handler: { _ in
+                self.dangerOnly.toggle()
+                self.filterMenuButton.menu = self.generateFilterPullDownMenu()
+            }
+        )
+        let unitsOfMeasurementMenu = UIMenu(
+            title: "Ед. изм. расстояний",
+            image: UIImage(systemName: "lines.measurement.horizontal"),
+            children: [
+                UIAction(
+                    title: "Киломерты",
+                    state: measureUnits == .kilometers ? .on : .off,
+                    handler: { _ in
+                        print("Selected Kilometers")
+
+                        self.measureUnits = .kilometers
+                        self.filterMenuButton.menu = self.generateFilterPullDownMenu()
+                    }
+                ),
+                UIAction(
+                    title: "Лунные орбиты",
+                    state: measureUnits == .lunarOrbits ? .on : .off,
+                    handler: { _ in
+                        print("Selected moon orbit")
+
+                        self.measureUnits = .lunarOrbits
+                        self.filterMenuButton.menu = self.generateFilterPullDownMenu()
+                    }
+                )
+            ]
+        )
+
+        let menuItems = [dangerAsteroids, unitsOfMeasurementMenu]
+        return UIMenu(title: "Параметры", children: menuItems)
     }
 }
 
