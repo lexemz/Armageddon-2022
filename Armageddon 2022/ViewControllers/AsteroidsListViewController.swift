@@ -24,15 +24,14 @@ class AsteroidsListViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Армагеддон 2022"
-        collectionView.backgroundColor = .systemBackground
 
-        collectionView.register(
-            AsteroidViewCell.self,
-            forCellWithReuseIdentifier: AsteroidViewCell.id
-        )
-        collectionView.alwaysBounceVertical = true
-
+        setupCollectionView()
         setupFilterButtion()
+        
+        viewModel.fetchAsteroids { [weak self] in
+            guard let unretainedSelf = self else { return }
+            unretainedSelf.collectionView.reloadData()
+        }
     }
 
     private func setupFilterButtion() {
@@ -44,6 +43,16 @@ class AsteroidsListViewController: UICollectionViewController {
             menu: generateFilterPullDownMenu()
         )
         navigationItem.rightBarButtonItem = filterMenuButton
+    }
+    
+    private func setupCollectionView() {
+        collectionView.backgroundColor = .systemBackground
+
+        collectionView.register(
+            AsteroidViewCell.self,
+            forCellWithReuseIdentifier: AsteroidViewCell.id
+        )
+        collectionView.alwaysBounceVertical = true
     }
 
     private func generateFilterPullDownMenu() -> UIMenu {
@@ -99,6 +108,8 @@ extension AsteroidsListViewController {
             withReuseIdentifier: AsteroidViewCell.id,
             for: indexPath
         ) as! AsteroidViewCell
+        
+        cell.viewModel = viewModel.cellViewModel(at: indexPath)
         
         return cell
     }

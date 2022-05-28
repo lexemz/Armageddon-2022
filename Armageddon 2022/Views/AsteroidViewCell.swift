@@ -12,30 +12,25 @@ class AsteroidViewCell: UICollectionViewCell {
     
     static let id = "asteroidCell"
     
+    var viewModel: AsteroidViewModelType! {
+        didSet {
+            configure()
+        }
+    }
+    
     private let asteroidContainerView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .gray
         return imageView
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        foo()
-        
+    private func configure() {
         setupUI()
         makeConstraints()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func foo() {
-        asteroidContainerView.image = UIImage(named: "dangerousBackground")
-    }
-    
     private func setupUI() {
+        asteroidContainerView.image = viewModel.isDangerous ? UIImage(named: "dangerousBackground") : UIImage(named: "safeBackground")
         contentView.backgroundColor = .systemBackground
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 10

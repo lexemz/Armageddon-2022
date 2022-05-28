@@ -13,16 +13,18 @@ protocol AsteroidsListViewModelType {
     
     func toggleDangerousOnly()
     func changeMeasureUnit(_ unit: MeasureUnit)
+    func fetchAsteroids(completion: @escaping () -> Void)
     
     // Data Source
     func numberOfItems() -> Int
+    func cellViewModel(at indexPath: IndexPath) -> AsteroidViewModelType
 }
 
 class AsteroidsListViewModel: AsteroidsListViewModelType {
-
-    
     var measureUnit: MeasureUnit = .kilometers
     var dangeroudsOnly: Bool = false
+    
+    var asteroids: [Asteroid] = []
     
     func toggleDangerousOnly() {
         dangeroudsOnly.toggle()
@@ -33,12 +35,20 @@ class AsteroidsListViewModel: AsteroidsListViewModelType {
         measureUnit = unit
         Log.d("Новая единица измерения: \(measureUnit)")
     }
+    
+    func fetchAsteroids(completion: @escaping () -> Void) {
+        asteroids = Asteroid.generateMock()
+    }
 }
 
 // MARK: - Data Source
 extension AsteroidsListViewModel {
     func numberOfItems() -> Int {
-        2
+        asteroids.count
+    }
+    
+    func cellViewModel(at indexPath: IndexPath) -> AsteroidViewModelType {
+        AsteroidViewModel(asteroid: asteroids[indexPath.row])
     }
 }
 
