@@ -27,6 +27,10 @@ class AsteroidViewCell: UICollectionViewCell {
         makeConstraints()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func foo() {
         asteroidContainerView.image = UIImage(named: "dangerousBackground")
     }
@@ -41,10 +45,6 @@ class AsteroidViewCell: UICollectionViewCell {
         layer.shadowRadius = 5.0
         layer.shadowOpacity = 0.25
         layer.masksToBounds = false
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 
