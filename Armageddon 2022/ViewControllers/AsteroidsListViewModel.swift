@@ -21,10 +21,12 @@ class AsteroidsListViewModel: AsteroidsListViewModelType {
     
     func toggleDangerousOnly() {
         dangeroudsOnly.toggle()
+        Log.d("Только опасные астероиы: \(dangeroudsOnly)")
     }
     
     func changeMeasureUnit(_ unit: MeasureUnit) {
         measureUnit = unit
+        Log.d("Новая единица измерения: \(measureUnit)")
     }
 }
 
