@@ -9,16 +9,10 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-enum MeasureUnite {
-    case kilometers
-    case lunarOrbits
-}
-
 class AsteroidsListViewController: UICollectionViewController {
-    private var dangerOnly = false
-    private var measureUnits: MeasureUnite = .kilometers
-
     private var filterMenuButton: UIBarButtonItem!
+    
+    private var viewModel: AsteroidsListViewModelType = AsteroidsListViewModel()
 
     init() {
         let layout = UICollectionViewLayout()
@@ -55,9 +49,9 @@ class AsteroidsListViewController: UICollectionViewController {
         let dangerAsteroids = UIAction(
             title: "Только опасные",
             image: UIImage(systemName: "flame"),
-            state: dangerOnly ? .on : .off,
+            state: viewModel.dangeroudsOnly ? .on : .off,
             handler: { _ in
-                self.dangerOnly.toggle()
+                self.viewModel.toggleDangerousOnly()
                 self.filterMenuButton.menu = self.generateFilterPullDownMenu()
             }
         )
@@ -67,21 +61,17 @@ class AsteroidsListViewController: UICollectionViewController {
             children: [
                 UIAction(
                     title: "Киломерты",
-                    state: measureUnits == .kilometers ? .on : .off,
+                    state: viewModel.measureUnit == .kilometers ? .on : .off,
                     handler: { _ in
-                        print("Selected Kilometers")
-
-                        self.measureUnits = .kilometers
+                        self.viewModel.changeMeasureUnit(.kilometers)
                         self.filterMenuButton.menu = self.generateFilterPullDownMenu()
                     }
                 ),
                 UIAction(
                     title: "Лунные орбиты",
-                    state: measureUnits == .lunarOrbits ? .on : .off,
+                    state: viewModel.measureUnit == .lunarOrbits ? .on : .off,
                     handler: { _ in
-                        print("Selected moon orbit")
-
-                        self.measureUnits = .lunarOrbits
+                        self.viewModel.changeMeasureUnit(.lunarOrbits)
                         self.filterMenuButton.menu = self.generateFilterPullDownMenu()
                     }
                 )
