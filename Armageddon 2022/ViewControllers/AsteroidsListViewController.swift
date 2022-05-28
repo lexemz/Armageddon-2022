@@ -46,17 +46,20 @@ class AsteroidsListViewController: UICollectionViewController {
     }
 
     private func generateFilterPullDownMenu() -> UIMenu {
+        let dangerImage = UIImage(systemName: "exclamationmark.triangle")?.withRenderingMode(.alwaysOriginal)
+        
         let dangerAsteroids = UIAction(
             title: "Только опасные",
-            image: UIImage(systemName: "flame"),
+            image: dangerImage?.withTintColor(.systemRed),
             state: viewModel.dangeroudsOnly ? .on : .off,
             handler: { _ in
                 self.viewModel.toggleDangerousOnly()
                 self.filterMenuButton.menu = self.generateFilterPullDownMenu()
             }
         )
+        
         let unitsOfMeasurementMenu = UIMenu(
-            title: "Ед. изм. расстояний",
+            title: "Едицы измерения расстояний",
             image: UIImage(systemName: "lines.measurement.horizontal"),
             children: [
                 UIAction(
