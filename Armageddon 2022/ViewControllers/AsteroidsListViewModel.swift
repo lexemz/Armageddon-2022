@@ -13,9 +13,14 @@ protocol AsteroidsListViewModelType {
     
     func toggleDangerousOnly()
     func changeMeasureUnit(_ unit: MeasureUnit)
+    
+    // Data Source
+    func numberOfItems() -> Int
 }
 
 class AsteroidsListViewModel: AsteroidsListViewModelType {
+
+    
     var measureUnit: MeasureUnit = .kilometers
     var dangeroudsOnly: Bool = false
     
@@ -27,6 +32,13 @@ class AsteroidsListViewModel: AsteroidsListViewModelType {
     func changeMeasureUnit(_ unit: MeasureUnit) {
         measureUnit = unit
         Log.d("Новая единица измерения: \(measureUnit)")
+    }
+}
+
+// MARK: - Data Source
+extension AsteroidsListViewModel {
+    func numberOfItems() -> Int {
+        2
     }
 }
 

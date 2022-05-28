@@ -7,15 +7,13 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class AsteroidsListViewController: UICollectionViewController {
     private var filterMenuButton: UIBarButtonItem!
     
     private var viewModel: AsteroidsListViewModelType = AsteroidsListViewModel()
 
     init() {
-        let layout = UICollectionViewLayout()
+        let layout = UICollectionViewFlowLayout()
         super.init(collectionViewLayout: layout)
     }
 
@@ -25,11 +23,14 @@ class AsteroidsListViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         navigationItem.title = "Армагеддон 2022"
         collectionView.backgroundColor = .systemBackground
 
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.register(
+            AsteroidViewCell.self,
+            forCellWithReuseIdentifier: AsteroidViewCell.id
+        )
+        collectionView.alwaysBounceVertical = true
 
         setupFilterButtion()
     }
@@ -86,24 +87,33 @@ class AsteroidsListViewController: UICollectionViewController {
     }
 }
 
-// MARK: - UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource & UICollectionViewDelegate
 
 extension AsteroidsListViewController {
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        viewModel.numberOfItems()
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-
-        // Configure the cell
-
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: AsteroidViewCell.id,
+            for: indexPath
+        ) as! AsteroidViewCell
+        
         return cell
+    }
+}
+
+extension AsteroidsListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        CGSize(width: view.frame.width - 32, height: 300)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        30
     }
 }
