@@ -10,6 +10,15 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class AsteroidsListViewController: UICollectionViewController {
+    init() {
+        let layout = UICollectionViewLayout()
+        super.init(collectionViewLayout: layout)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

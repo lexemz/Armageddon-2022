@@ -12,31 +12,28 @@ class MainMabBarController: UITabBarController {
         super.viewDidLoad()
         setupTabBar()
     }
-    
+
     private func setupTabBar() {
-        let flowLayout = UICollectionViewLayout()
         let asteroidsListVC = makeTabBarItem(
-            viewController: AsteroidsListViewController(
-                collectionViewLayout: flowLayout
-            ),
+            viewController: AsteroidsListViewController(),
             itemTitle: "Астероиды",
             unselectedImageName: "globe",
             selectedImageName: "globe"
         )
-        
+
         /*
-        DestructionListViewController
-        let destructionListVC = makeTabBarItem(
-            viewController: ,
-            itemTitle: "Уничтожение",
-            unselectedImageName: "trash",
-            selectedImageName: "trash.fill"
-        )
-        */
-        
+         DestructionListViewController
+         let destructionListVC = makeTabBarItem(
+             viewController: ,
+             itemTitle: "Уничтожение",
+             unselectedImageName: "trash",
+             selectedImageName: "trash.fill"
+         )
+         */
+
         viewControllers = [asteroidsListVC]
     }
-    
+
     private func makeTabBarItem(
         viewController: UIViewController,
         itemTitle: String,
