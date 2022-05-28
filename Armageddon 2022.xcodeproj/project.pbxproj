@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		78146DC72842227D00242153 /* AsteroidsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78146DC62842227D00242153 /* AsteroidsListViewModel.swift */; };
 		78146DCA2842267000242153 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78146DC92842267000242153 /* Log.swift */; };
+		78146DCD28426E0C00242153 /* AsteroidViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78146DCC28426E0C00242153 /* AsteroidViewCell.swift */; };
 		78346100284163A30072BE03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783460FF284163A30072BE03 /* AppDelegate.swift */; };
 		78346102284163A30072BE03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78346101284163A30072BE03 /* SceneDelegate.swift */; };
 		78346109284163A50072BE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78346108284163A50072BE03 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		78146DC62842227D00242153 /* AsteroidsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsListViewModel.swift; sourceTree = "<group>"; };
 		78146DC92842267000242153 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		78146DCC28426E0C00242153 /* AsteroidViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidViewCell.swift; sourceTree = "<group>"; };
 		783460FC284163A30072BE03 /* Armageddon 2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Armageddon 2022.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		783460FF284163A30072BE03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78346101284163A30072BE03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		78146DCB28426DDD00242153 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				78146DCC28426E0C00242153 /* AsteroidViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		783460F3284163A30072BE03 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 			children = (
 				78346119284168030072BE03 /* MainTabBarController.swift */,
 				78346116284165000072BE03 /* ViewControllers */,
+				78146DCB28426DDD00242153 /* Views */,
 				78146DC82842266300242153 /* Helpers */,
 				78346115284164E60072BE03 /* Resources */,
 				78346114284164DD0072BE03 /* Storyboards */,
@@ -185,6 +196,7 @@
 			files = (
 				783461182841651A0072BE03 /* AsteroidsListViewController.swift in Sources */,
 				78346100284163A30072BE03 /* AppDelegate.swift in Sources */,
+				78146DCD28426E0C00242153 /* AsteroidViewCell.swift in Sources */,
 				78146DCA2842267000242153 /* Log.swift in Sources */,
 				78146DC72842227D00242153 /* AsteroidsListViewModel.swift in Sources */,
 				7834611A284168030072BE03 /* MainTabBarController.swift in Sources */,
