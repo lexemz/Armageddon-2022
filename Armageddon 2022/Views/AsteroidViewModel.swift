@@ -13,6 +13,7 @@ protocol AsteroidViewModelType {
     var arrivalDate: String { get }
     var arrivalDistance: Double { get }
     var isDangerous: Bool { get }
+    var dangerStatusLabel: NSMutableAttributedString { get }
 }
 
 class AsteroidViewModel: AsteroidViewModelType {
@@ -34,6 +35,10 @@ class AsteroidViewModel: AsteroidViewModelType {
     
     var isDangerous: Bool {
         asteroid.isDangerous
+    }
+    
+    var dangerStatusLabel: NSMutableAttributedString {
+        NSMutableAttributedString(string: "\(asteroid.isDangerous)")
     }
     
     private let asteroid: Asteroid
