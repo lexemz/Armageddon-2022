@@ -25,7 +25,7 @@ class AsteroidViewCell: UICollectionViewCell {
         return label
     }()
     
-    private let asteroidArrivalLabel: UILabel = {
+    private let asteroidArrivalDateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Helvetica", size: 16)
         return label
@@ -40,7 +40,7 @@ class AsteroidViewCell: UICollectionViewCell {
     private lazy var asteroidInfoStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
             asteroidDiametrLabel,
-            asteroidArrivalLabel,
+            asteroidArrivalDateLabel,
             asteroidDistanceLabel
         ])
         stackView.axis = .vertical
@@ -103,10 +103,10 @@ class AsteroidViewCell: UICollectionViewCell {
         
         // FIXME: перенести подготовку сообещний во ViewModel
         asteroidNameLabel.text = viewModel.name
-        asteroidDiametrLabel.text = "Диаметр: \(viewModel.diametr)м"
-        asteroidArrivalLabel.text = "Подлетает: \(viewModel.arrivalDate)"
-        asteroidDistanceLabel.text = "на расстояние \(viewModel.arrivalDistance) км"
-        dangerStatusLabel.attributedText = viewModel.dangerStatusLabel
+        asteroidDiametrLabel.text =  viewModel.diametrText
+        asteroidArrivalDateLabel.text = viewModel.arrivalDateText
+        asteroidDistanceLabel.text =  viewModel.arrivalDistanceText
+        dangerStatusLabel.attributedText = viewModel.dangerStatusText
     }
 }
 

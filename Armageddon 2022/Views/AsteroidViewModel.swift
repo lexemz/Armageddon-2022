@@ -8,36 +8,42 @@
 import Foundation
 
 protocol AsteroidViewModelType {
-    var name: String { get }
-    var diametr: Double { get }
-    var arrivalDate: String { get }
-    var arrivalDistance: Double { get }
     var isDangerous: Bool { get }
-    var dangerStatusLabel: NSMutableAttributedString { get }
+    var diametr: Double { get }
+    
+    var name: String { get }
+    var diametrText: String { get }
+    var arrivalDateText: String { get }
+    var arrivalDistanceText: String { get }
+    var dangerStatusText: NSMutableAttributedString { get }
 }
 
 class AsteroidViewModel: AsteroidViewModelType {
-    var name: String {
-        asteroid.name
+    var isDangerous: Bool {
+        asteroid.isDangerous
     }
     
     var diametr: Double {
         asteroid.diametr
     }
     
-    var arrivalDate: String {
-        asteroid.arrivalDate
+    var name: String {
+        asteroid.name
     }
     
-    var arrivalDistance: Double {
-        asteroid.arrivalDistance
+    var diametrText: String {
+        "Диаметр: \(asteroid.diametr)м"
     }
     
-    var isDangerous: Bool {
-        asteroid.isDangerous
+    var arrivalDateText: String {
+        "Подлетает: \(asteroid.arrivalDate)"
     }
     
-    var dangerStatusLabel: NSMutableAttributedString {
+    var arrivalDistanceText: String {
+        "на расстояние \(asteroid.arrivalDistance) км"
+    }
+    
+    var dangerStatusText: NSMutableAttributedString {
         NSMutableAttributedString(string: "\(asteroid.isDangerous)")
     }
     
