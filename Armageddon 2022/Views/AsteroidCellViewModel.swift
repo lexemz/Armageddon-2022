@@ -1,5 +1,5 @@
 //
-//  AsteroidViewModel.swift
+//  AsteroidCellViewModel.swift
 //  Armageddon 2022
 //
 //  Created by Igor Buzykin on 28.05.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AsteroidViewModelType {
+protocol AsteroidCellViewModelType {
     var isDangerous: Bool { get }
     var diametr: Double { get }
     
@@ -18,7 +18,7 @@ protocol AsteroidViewModelType {
     var dangerStatusText: NSMutableAttributedString { get }
 }
 
-class AsteroidViewModel: AsteroidViewModelType {
+class AsteroidCellViewModel: AsteroidCellViewModelType {
     var isDangerous: Bool {
         asteroid.isDangerous
     }

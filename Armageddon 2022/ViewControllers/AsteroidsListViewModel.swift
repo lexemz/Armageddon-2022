@@ -17,7 +17,7 @@ protocol AsteroidsListViewModelType {
     
     // Data Source
     func numberOfItems() -> Int
-    func cellViewModel(at indexPath: IndexPath) -> AsteroidViewModelType
+    func cellViewModel(at indexPath: IndexPath) -> AsteroidCellViewModelType
 }
 
 class AsteroidsListViewModel: AsteroidsListViewModelType {
@@ -47,8 +47,8 @@ extension AsteroidsListViewModel {
         asteroids.count
     }
     
-    func cellViewModel(at indexPath: IndexPath) -> AsteroidViewModelType {
-        AsteroidViewModel(asteroid: asteroids[indexPath.row])
+    func cellViewModel(at indexPath: IndexPath) -> AsteroidCellViewModelType {
+        AsteroidCellViewModel(asteroid: asteroids[indexPath.row])
     }
 }
 

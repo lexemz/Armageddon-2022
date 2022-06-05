@@ -10,7 +10,7 @@
 		26B09AF82F1F3D0504BBA3A9 /* Pods_Armageddon_2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A86F386AA7D20177C57575B /* Pods_Armageddon_2022.framework */; };
 		78146DC72842227D00242153 /* AsteroidsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78146DC62842227D00242153 /* AsteroidsListViewModel.swift */; };
 		78146DCA2842267000242153 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78146DC92842267000242153 /* Log.swift */; };
-		78146DCD28426E0C00242153 /* AsteroidViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78146DCC28426E0C00242153 /* AsteroidViewCell.swift */; };
+		78146DCD28426E0C00242153 /* AsteroidCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78146DCC28426E0C00242153 /* AsteroidCellView.swift */; };
 		78346100284163A30072BE03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783460FF284163A30072BE03 /* AppDelegate.swift */; };
 		78346102284163A30072BE03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78346101284163A30072BE03 /* SceneDelegate.swift */; };
 		78346109284163A50072BE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78346108284163A50072BE03 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 		783461182841651A0072BE03 /* AsteroidsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783461172841651A0072BE03 /* AsteroidsListViewController.swift */; };
 		7834611A284168030072BE03 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78346119284168030072BE03 /* MainTabBarController.swift */; };
 		78521EB52842AB5900E82523 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521EB42842AB5900E82523 /* Asteroid.swift */; };
-		78521EB82842AC1400E82523 /* AsteroidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521EB72842AC1400E82523 /* AsteroidViewModel.swift */; };
+		78521EB82842AC1400E82523 /* AsteroidCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521EB72842AC1400E82523 /* AsteroidCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		238A1F628E528255B054D2EF /* Pods-Armageddon 2022.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Armageddon 2022.debug.xcconfig"; path = "Target Support Files/Pods-Armageddon 2022/Pods-Armageddon 2022.debug.xcconfig"; sourceTree = "<group>"; };
 		78146DC62842227D00242153 /* AsteroidsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsListViewModel.swift; sourceTree = "<group>"; };
 		78146DC92842267000242153 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		78146DCC28426E0C00242153 /* AsteroidViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidViewCell.swift; sourceTree = "<group>"; };
+		78146DCC28426E0C00242153 /* AsteroidCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellView.swift; sourceTree = "<group>"; };
 		783460FC284163A30072BE03 /* Armageddon 2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Armageddon 2022.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		783460FF284163A30072BE03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78346101284163A30072BE03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +36,7 @@
 		783461172841651A0072BE03 /* AsteroidsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsListViewController.swift; sourceTree = "<group>"; };
 		78346119284168030072BE03 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		78521EB42842AB5900E82523 /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
-		78521EB72842AC1400E82523 /* AsteroidViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidViewModel.swift; sourceTree = "<group>"; };
+		78521EB72842AC1400E82523 /* AsteroidCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellViewModel.swift; sourceTree = "<group>"; };
 		F10F63F8EC06F6AB48BAF0A0 /* Pods-Armageddon 2022.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Armageddon 2022.release.xcconfig"; path = "Target Support Files/Pods-Armageddon 2022/Pods-Armageddon 2022.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,8 +72,8 @@
 		78146DCB28426DDD00242153 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				78146DCC28426E0C00242153 /* AsteroidViewCell.swift */,
-				78521EB72842AC1400E82523 /* AsteroidViewModel.swift */,
+				78146DCC28426E0C00242153 /* AsteroidCellView.swift */,
+				78521EB72842AC1400E82523 /* AsteroidCellViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,9 +278,9 @@
 			files = (
 				783461182841651A0072BE03 /* AsteroidsListViewController.swift in Sources */,
 				78346100284163A30072BE03 /* AppDelegate.swift in Sources */,
-				78146DCD28426E0C00242153 /* AsteroidViewCell.swift in Sources */,
+				78146DCD28426E0C00242153 /* AsteroidCellView.swift in Sources */,
 				78146DCA2842267000242153 /* Log.swift in Sources */,
-				78521EB82842AC1400E82523 /* AsteroidViewModel.swift in Sources */,
+				78521EB82842AC1400E82523 /* AsteroidCellViewModel.swift in Sources */,
 				78521EB52842AB5900E82523 /* Asteroid.swift in Sources */,
 				78146DC72842227D00242153 /* AsteroidsListViewModel.swift in Sources */,
 				7834611A284168030072BE03 /* MainTabBarController.swift in Sources */,

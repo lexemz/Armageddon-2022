@@ -49,8 +49,8 @@ class AsteroidsListViewController: UICollectionViewController {
         collectionView.backgroundColor = .systemBackground
 
         collectionView.register(
-            AsteroidViewCell.self,
-            forCellWithReuseIdentifier: AsteroidViewCell.id
+            AsteroidCellView.self,
+            forCellWithReuseIdentifier: AsteroidCellView.id
         )
         collectionView.alwaysBounceVertical = true
     }
@@ -105,9 +105,9 @@ extension AsteroidsListViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: AsteroidViewCell.id,
+            withReuseIdentifier: AsteroidCellView.id,
             for: indexPath
-        ) as! AsteroidViewCell
+        ) as! AsteroidCellView
         
         cell.viewModel = viewModel.cellViewModel(at: indexPath)
         

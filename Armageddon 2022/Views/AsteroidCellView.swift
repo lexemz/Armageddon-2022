@@ -1,5 +1,5 @@
 //
-//  AsteroidViewCell.swift
+//  AsteroidCellView.swift
 //  Armageddon 2022
 //
 //  Created by Igor Buzykin on 28.05.2022.
@@ -8,7 +8,7 @@
 import SnapKit
 import UIKit
 
-class AsteroidViewCell: UICollectionViewCell {
+class AsteroidCellView: UICollectionViewCell {
     // MARK: - UI
 
     private let asteroidContainerView = UIImageView()
@@ -71,7 +71,7 @@ class AsteroidViewCell: UICollectionViewCell {
     
     static let id = "asteroidCell"
     
-    var viewModel: AsteroidViewModelType! {
+    var viewModel: AsteroidCellViewModelType! {
         didSet {
             configure()
         }
@@ -110,7 +110,7 @@ class AsteroidViewCell: UICollectionViewCell {
     }
 }
 
-extension AsteroidViewCell {
+extension AsteroidCellView {
     private func makeConstraints() {
         contentView.addSubview(asteroidContainerView)
         asteroidContainerView.snp.makeConstraints { make in
