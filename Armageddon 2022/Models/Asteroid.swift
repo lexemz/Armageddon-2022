@@ -31,7 +31,21 @@ extension Asteroid {
                 arrivalDate: "20-06-2022",
                 arrivalDistance: 112,
                 isDangerous: false
-            )
+            ),
+            Asteroid(
+                name: "2023 QQ",
+                diametr: 300,
+                arrivalDate: "22-06-2022",
+                arrivalDistance: 140,
+                isDangerous: false
+            ),
+            Asteroid(
+                name: "2023 QQ",
+                diametr: 1200,
+                arrivalDate: "14-08-2022",
+                arrivalDistance: 140,
+                isDangerous: true
+            ),
         ]
     }
 }
