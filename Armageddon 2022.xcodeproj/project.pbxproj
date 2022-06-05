@@ -151,8 +151,7 @@
 		78346116284165000072BE03 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				783461172841651A0072BE03 /* AsteroidsListViewController.swift */,
-				78146DC62842227D00242153 /* AsteroidsListViewModel.swift */,
+				78AF1487284CD16200C2D326 /* AsteroidList */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -175,6 +174,15 @@
 				78AF1483284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		78AF1487284CD16200C2D326 /* AsteroidList */ = {
+			isa = PBXGroup;
+			children = (
+				783461172841651A0072BE03 /* AsteroidsListViewController.swift */,
+				78146DC62842227D00242153 /* AsteroidsListViewModel.swift */,
+			);
+			path = AsteroidList;
 			sourceTree = "<group>";
 		};
 		CED16BB61342A728B26CB455 /* Frameworks */ = {
