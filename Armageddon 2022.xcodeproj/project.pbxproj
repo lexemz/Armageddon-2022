@@ -24,6 +24,7 @@
 		78AF1482284CA14900C2D326 /* MeasureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1481284CA14900C2D326 /* MeasureUnit.swift */; };
 		78AF1484284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1483284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift */; };
 		78AF1486284CAFBF00C2D326 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1485284CAFBF00C2D326 /* Colors.swift */; };
+		78AF148D284CD21500C2D326 /* DestructionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF148C284CD21500C2D326 /* DestructionListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		78AF1481284CA14900C2D326 /* MeasureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureUnit.swift; sourceTree = "<group>"; };
 		78AF1483284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellViewModelDelegate.swift; sourceTree = "<group>"; };
 		78AF1485284CAFBF00C2D326 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		78AF148C284CD21500C2D326 /* DestructionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestructionListViewController.swift; sourceTree = "<group>"; };
 		F10F63F8EC06F6AB48BAF0A0 /* Pods-Armageddon 2022.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Armageddon 2022.release.xcconfig"; path = "Target Support Files/Pods-Armageddon 2022/Pods-Armageddon 2022.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,10 +111,10 @@
 		783460FE284163A30072BE03 /* Armageddon 2022 */ = {
 			isa = PBXGroup;
 			children = (
-				78346119284168030072BE03 /* MainTabBarController.swift */,
 				78346116284165000072BE03 /* ViewControllers */,
 				78146DCB28426DDD00242153 /* Views */,
 				78AF147C284CA0FD00C2D326 /* Protocols */,
+				78AF148E284CD2D800C2D326 /* Controllers */,
 				78146DC82842266300242153 /* Helpers */,
 				78521EB62842AB6400E82523 /* Models */,
 				78346115284164E60072BE03 /* Resources */,
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				78AF1487284CD16200C2D326 /* AsteroidList */,
+				78AF148B284CD20300C2D326 /* DestructionList */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +186,22 @@
 				78146DC62842227D00242153 /* AsteroidsListViewModel.swift */,
 			);
 			path = AsteroidList;
+			sourceTree = "<group>";
+		};
+		78AF148B284CD20300C2D326 /* DestructionList */ = {
+			isa = PBXGroup;
+			children = (
+				78AF148C284CD21500C2D326 /* DestructionListViewController.swift */,
+			);
+			path = DestructionList;
+			sourceTree = "<group>";
+		};
+		78AF148E284CD2D800C2D326 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				78346119284168030072BE03 /* MainTabBarController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		CED16BB61342A728B26CB455 /* Frameworks */ = {
@@ -314,6 +333,7 @@
 				78146DCA2842267000242153 /* Log.swift in Sources */,
 				78521EB82842AC1400E82523 /* AsteroidCellViewModel.swift in Sources */,
 				78521EB52842AB5900E82523 /* Asteroid.swift in Sources */,
+				78AF148D284CD21500C2D326 /* DestructionListViewController.swift in Sources */,
 				78AF1482284CA14900C2D326 /* MeasureUnit.swift in Sources */,
 				78146DC72842227D00242153 /* AsteroidsListViewModel.swift in Sources */,
 				7834611A284168030072BE03 /* MainTabBarController.swift in Sources */,

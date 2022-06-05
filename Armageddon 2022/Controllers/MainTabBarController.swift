@@ -21,17 +21,14 @@ class MainMabBarController: UITabBarController {
             selectedImageName: "globe"
         )
 
-        /*
-         DestructionListViewController
          let destructionListVC = makeTabBarItem(
-             viewController: ,
+             viewController: DestructionListViewController(),
              itemTitle: "Уничтожение",
              unselectedImageName: "trash",
              selectedImageName: "trash.fill"
          )
-         */
 
-        viewControllers = [asteroidsListVC]
+        viewControllers = [asteroidsListVC, destructionListVC]
     }
 
     private func makeTabBarItem(
