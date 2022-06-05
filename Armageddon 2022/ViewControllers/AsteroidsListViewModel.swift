@@ -48,7 +48,7 @@ extension AsteroidsListViewModel {
     }
     
     func cellViewModel(at indexPath: IndexPath) -> AsteroidCellViewModelType {
-        AsteroidCellViewModel(asteroid: asteroids[indexPath.row])
+        AsteroidCellViewModel(asteroid: asteroids[indexPath.row], indexPath: indexPath)
     }
 }
 

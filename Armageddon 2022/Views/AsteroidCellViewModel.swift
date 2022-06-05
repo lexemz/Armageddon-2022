@@ -16,6 +16,8 @@ protocol AsteroidCellViewModelType {
     var arrivalDateText: String { get }
     var arrivalDistanceText: String { get }
     var dangerStatusText: NSMutableAttributedString { get }
+    
+    func destroyButtonIsPressed()
 }
 
 class AsteroidCellViewModel: AsteroidCellViewModelType {
@@ -48,8 +50,16 @@ class AsteroidCellViewModel: AsteroidCellViewModelType {
     }
     
     private let asteroid: Asteroid
+    private let indexPath: IndexPath
     
-    init(asteroid: Asteroid) {
+    init(asteroid: Asteroid,
+         indexPath: IndexPath
+    ) {
         self.asteroid = asteroid
+        self.indexPath = indexPath
+    }
+    
+    func destroyButtonIsPressed() {
+        Log.d("Destroy button is pressed - \(indexPath)")
     }
 }

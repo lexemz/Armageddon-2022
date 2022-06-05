@@ -101,12 +101,17 @@ class AsteroidCellView: UICollectionViewCell {
         
         asteroidImage.image = UIImage(named: "asteroid")
         
-        // FIXME: перенести подготовку сообещний во ViewModel
         asteroidNameLabel.text = viewModel.name
         asteroidDiametrLabel.text =  viewModel.diametrText
         asteroidArrivalDateLabel.text = viewModel.arrivalDateText
         asteroidDistanceLabel.text =  viewModel.arrivalDistanceText
         dangerStatusLabel.attributedText = viewModel.dangerStatusText
+        
+        destroyButton.addTarget(self, action: #selector(destroyButtonIsPressed), for: .touchUpInside)
+    }
+    
+    @objc private func destroyButtonIsPressed() {
+        viewModel.destroyButtonIsPressed()
     }
 }
 
