@@ -69,6 +69,7 @@ class AsteroidCellView: UICollectionViewCell {
     private let dangerStatusLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Helvetica", size: 16)
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
@@ -160,12 +161,14 @@ extension AsteroidCellView {
         destroyButton.snp.makeConstraints { make in
             make.trailing.equalTo(contentView.snp.trailing).inset(16)
             make.bottom.equalTo(contentView.snp.bottom).inset(16)
+            make.width.equalTo(120)
         }
         
         contentView.addSubview(dangerStatusLabel)
         dangerStatusLabel.snp.makeConstraints { make in
             make.bottom.equalTo(contentView.snp.bottom).inset(19)
             make.leading.equalTo(contentView.snp.leading).inset(16)
+            make.trailing.equalTo(destroyButton.snp.leading).inset(-16)
         }
     }
 }
