@@ -34,7 +34,21 @@ class AsteroidCellViewModel: AsteroidCellViewModelType {
     }
     
     var dangerStatusText: NSMutableAttributedString {
-        NSMutableAttributedString(string: "\(asteroid.isDangerous)")
+        let asteroidStatus = NSMutableAttributedString(string: "Оценка: ")
+        
+        if isDangerous {
+            let status = NSMutableAttributedString(
+                string: "опасен",
+                attributes: [
+                    .foregroundColor: UIColor.systemRed,
+                    .strokeWidth: -3
+                ]
+            )
+            asteroidStatus.append(status)
+        } else {
+            asteroidStatus.append(NSAttributedString(string: "не опасен"))
+        }
+        return asteroidStatus
     }
     
     private let asteroid: Asteroid
