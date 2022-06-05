@@ -97,7 +97,7 @@ class AsteroidViewCell: UICollectionViewCell {
         UIImage(named: "dangerousBackground") : UIImage(named: "safeBackground")
         
         dinoImage.image = viewModel.isDangerous ?
-        UIImage(named: "dino_shocked") : UIImage(named: "dino")
+        UIImage(named: "dinoShocked") : UIImage(named: "dino")
         
         asteroidImage.image = UIImage(named: "asteroid")
         
