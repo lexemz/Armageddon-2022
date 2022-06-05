@@ -109,9 +109,31 @@ class AsteroidCellView: UICollectionViewCell {
         asteroidDiametrLabel.text =  viewModel.diametrText
         asteroidArrivalDateLabel.text = viewModel.arrivalDateText
         asteroidDistanceLabel.text =  viewModel.arrivalDistanceText
-        dangerStatusLabel.attributedText = viewModel.dangerStatusText
-        
+        dangerStatusLabel.attributedText = handleAsteroidDangerStatus()
+
         destroyButton.addTarget(self, action: #selector(destroyButtonIsPressed), for: .touchUpInside)
+    }
+    
+    private func handleAsteroidDangerStatus() -> NSAttributedString {
+        let statusComponents = viewModel.dangerStatusTextComponents
+        if let statusHead = statusComponents["head"], let status = statusComponents["status"] {
+            let statusPhrase = NSMutableAttributedString(string: statusHead)
+            
+            if viewModel.isDangerous {
+                statusPhrase.append(
+                    NSMutableAttributedString(
+                        string: status,
+                        attributes: [
+                            .foregroundColor: Colors.asteroidDangateousStatusColor,
+                            .font: UIFont(name: "Helvetica-Bold", size: 16) ?? UIFont.boldSystemFont(ofSize: 16)
+                        ])
+                )
+            } else {
+                statusPhrase.append(NSAttributedString(string: status))
+            }
+            return statusPhrase
+        }
+        return NSAttributedString(string: "Статус неизвестен")
     }
     
     @objc private func destroyButtonIsPressed() {

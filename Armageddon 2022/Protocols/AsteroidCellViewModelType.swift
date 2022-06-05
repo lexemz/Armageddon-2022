@@ -15,7 +15,7 @@ protocol AsteroidCellViewModelType {
     var diametrText: String { get }
     var arrivalDateText: String { get }
     var arrivalDistanceText: String { get }
-    var dangerStatusText: NSMutableAttributedString { get }
+    var dangerStatusTextComponents: [String: String] { get }
     
     func destroyButtonIsPressed()
 }

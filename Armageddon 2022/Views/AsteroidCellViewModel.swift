@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 class AsteroidCellViewModel: AsteroidCellViewModelType {
     var isDangerous: Bool {
@@ -33,22 +32,11 @@ class AsteroidCellViewModel: AsteroidCellViewModelType {
         "на расстояние \(asteroid.arrivalDistance) км"
     }
     
-    var dangerStatusText: NSMutableAttributedString {
-        let asteroidStatus = NSMutableAttributedString(string: "Оценка: ")
-        
-        if isDangerous {
-            let status = NSMutableAttributedString(
-                string: "опасен",
-                attributes: [
-                    .foregroundColor: Colors.asteroidDangateousStatusColor,
-                    .font: UIFont(name: "Helvetica-Bold", size: 16) ?? UIFont.boldSystemFont(ofSize: 16)
-                ]
-            )
-            asteroidStatus.append(status)
-        } else {
-            asteroidStatus.append(NSAttributedString(string: "не опасен"))
-        }
-        return asteroidStatus
+    var dangerStatusTextComponents: [String: String] {
+        [
+            "head": "Оценка: ",
+            "status": isDangerous ? "опасен" : "не опасен"
+        ]
     }
     
     private let asteroid: Asteroid
