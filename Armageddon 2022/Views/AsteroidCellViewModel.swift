@@ -40,8 +40,8 @@ class AsteroidCellViewModel: AsteroidCellViewModelType {
             let status = NSMutableAttributedString(
                 string: "опасен",
                 attributes: [
-                    .foregroundColor: UIColor.systemRed,
-                    .strokeWidth: -3
+                    .foregroundColor: Colors.asteroidDangateousStatusColor,
+                    .strokeWidth: -5
                 ]
             )
             asteroidStatus.append(status)

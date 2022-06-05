@@ -23,6 +23,7 @@
 		78AF1480284CA12300C2D326 /* AsteroidCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF147F284CA12300C2D326 /* AsteroidCellViewModelType.swift */; };
 		78AF1482284CA14900C2D326 /* MeasureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1481284CA14900C2D326 /* MeasureUnit.swift */; };
 		78AF1484284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1483284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift */; };
+		78AF1486284CAFBF00C2D326 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1485284CAFBF00C2D326 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		78AF147F284CA12300C2D326 /* AsteroidCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellViewModelType.swift; sourceTree = "<group>"; };
 		78AF1481284CA14900C2D326 /* MeasureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureUnit.swift; sourceTree = "<group>"; };
 		78AF1483284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellViewModelDelegate.swift; sourceTree = "<group>"; };
+		78AF1485284CAFBF00C2D326 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F10F63F8EC06F6AB48BAF0A0 /* Pods-Armageddon 2022.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Armageddon 2022.release.xcconfig"; path = "Target Support Files/Pods-Armageddon 2022/Pods-Armageddon 2022.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +162,7 @@
 			children = (
 				78521EB42842AB5900E82523 /* Asteroid.swift */,
 				78AF1481284CA14900C2D326 /* MeasureUnit.swift */,
+				78AF1485284CAFBF00C2D326 /* Colors.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				783461182841651A0072BE03 /* AsteroidsListViewController.swift in Sources */,
 				78346100284163A30072BE03 /* AppDelegate.swift in Sources */,
 				78146DCD28426E0C00242153 /* AsteroidCellView.swift in Sources */,
+				78AF1486284CAFBF00C2D326 /* Colors.swift in Sources */,
 				78146DCA2842267000242153 /* Log.swift in Sources */,
 				78521EB82842AC1400E82523 /* AsteroidCellViewModel.swift in Sources */,
 				78521EB52842AB5900E82523 /* Asteroid.swift in Sources */,
