@@ -55,10 +55,13 @@ class AsteroidCellView: UICollectionViewCell {
     private let destroyButton: UIButton = {
         let button = UIButton(type: .system)
         var config = UIButton.Configuration.filled()
-        // FIXME: Изменить шрифт
+
+        var buttonLabel = AttributedString("УНИЧТОЖИТЬ")
+        buttonLabel.font = UIFont(name: "Helvetica-Bold", size: 13)
+        
         config.cornerStyle = .capsule
-        config.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 12, bottom: 5, trailing: 12)
-        config.title = "УНИЧТОЖИТЬ"
+        config.contentInsets = NSDirectionalEdgeInsets(top: 7, leading: 12, bottom: 7, trailing: 12)
+        config.attributedTitle = buttonLabel
         button.configuration = config
         return button
     }()
