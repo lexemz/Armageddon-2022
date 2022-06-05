@@ -41,7 +41,7 @@ class AsteroidCellViewModel: AsteroidCellViewModelType {
                 string: "опасен",
                 attributes: [
                     .foregroundColor: Colors.asteroidDangateousStatusColor,
-                    .strokeWidth: -5
+                    .font: UIFont(name: "Helvetica-Bold", size: 16) ?? UIFont.boldSystemFont(ofSize: 16)
                 ]
             )
             asteroidStatus.append(status)
