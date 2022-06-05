@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class AsteroidCellViewModel: AsteroidCellViewModelType {
     var isDangerous: Bool {
@@ -38,15 +39,18 @@ class AsteroidCellViewModel: AsteroidCellViewModelType {
     
     private let asteroid: Asteroid
     private let indexPath: IndexPath
+    private let deleagte: AsteroidCellViewModelDelegate
     
     init(asteroid: Asteroid,
-         indexPath: IndexPath
+         indexPath: IndexPath,
+         delegate: AsteroidCellViewModelDelegate
     ) {
         self.asteroid = asteroid
         self.indexPath = indexPath
+        self.deleagte = delegate
     }
     
     func destroyButtonIsPressed() {
-        Log.d("Destroy button is pressed - \(indexPath)")
+        deleagte.destroyButtonIsPressed(at: indexPath)
     }
 }

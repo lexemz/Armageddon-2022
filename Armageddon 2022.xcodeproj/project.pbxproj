@@ -22,6 +22,7 @@
 		78AF147E284CA10F00C2D326 /* AsteroidsListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF147D284CA10F00C2D326 /* AsteroidsListViewModelType.swift */; };
 		78AF1480284CA12300C2D326 /* AsteroidCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF147F284CA12300C2D326 /* AsteroidCellViewModelType.swift */; };
 		78AF1482284CA14900C2D326 /* MeasureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1481284CA14900C2D326 /* MeasureUnit.swift */; };
+		78AF1484284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1483284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		78AF147D284CA10F00C2D326 /* AsteroidsListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsListViewModelType.swift; sourceTree = "<group>"; };
 		78AF147F284CA12300C2D326 /* AsteroidCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellViewModelType.swift; sourceTree = "<group>"; };
 		78AF1481284CA14900C2D326 /* MeasureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureUnit.swift; sourceTree = "<group>"; };
+		78AF1483284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellViewModelDelegate.swift; sourceTree = "<group>"; };
 		F10F63F8EC06F6AB48BAF0A0 /* Pods-Armageddon 2022.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Armageddon 2022.release.xcconfig"; path = "Target Support Files/Pods-Armageddon 2022/Pods-Armageddon 2022.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 			children = (
 				78AF147D284CA10F00C2D326 /* AsteroidsListViewModelType.swift */,
 				78AF147F284CA12300C2D326 /* AsteroidCellViewModelType.swift */,
+				78AF1483284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				78AF1482284CA14900C2D326 /* MeasureUnit.swift in Sources */,
 				78146DC72842227D00242153 /* AsteroidsListViewModel.swift in Sources */,
 				7834611A284168030072BE03 /* MainTabBarController.swift in Sources */,
+				78AF1484284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift in Sources */,
 				78AF1480284CA12300C2D326 /* AsteroidCellViewModelType.swift in Sources */,
 				78AF147E284CA10F00C2D326 /* AsteroidsListViewModelType.swift in Sources */,
 				78346102284163A30072BE03 /* SceneDelegate.swift in Sources */,

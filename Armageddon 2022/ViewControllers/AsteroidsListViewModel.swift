@@ -35,7 +35,16 @@ extension AsteroidsListViewModel {
     }
     
     func cellViewModel(at indexPath: IndexPath) -> AsteroidCellViewModelType {
-        AsteroidCellViewModel(asteroid: asteroids[indexPath.row], indexPath: indexPath)
+        AsteroidCellViewModel(
+            asteroid: asteroids[indexPath.row],
+            indexPath: indexPath,
+            delegate: self
+        )
     }
 }
 
+extension AsteroidsListViewModel: AsteroidCellViewModelDelegate {
+    func destroyButtonIsPressed(at indexPath: IndexPath) {
+        Log.d("Destroy button is pressed -> \(indexPath)")
+    }
+}
