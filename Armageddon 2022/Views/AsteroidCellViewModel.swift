@@ -7,19 +7,6 @@
 
 import Foundation
 
-protocol AsteroidCellViewModelType {
-    var isDangerous: Bool { get }
-    var diametr: Double { get }
-    
-    var name: String { get }
-    var diametrText: String { get }
-    var arrivalDateText: String { get }
-    var arrivalDistanceText: String { get }
-    var dangerStatusText: NSMutableAttributedString { get }
-    
-    func destroyButtonIsPressed()
-}
-
 class AsteroidCellViewModel: AsteroidCellViewModelType {
     var isDangerous: Bool {
         asteroid.isDangerous

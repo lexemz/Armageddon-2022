@@ -19,6 +19,9 @@
 		7834611A284168030072BE03 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78346119284168030072BE03 /* MainTabBarController.swift */; };
 		78521EB52842AB5900E82523 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521EB42842AB5900E82523 /* Asteroid.swift */; };
 		78521EB82842AC1400E82523 /* AsteroidCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521EB72842AC1400E82523 /* AsteroidCellViewModel.swift */; };
+		78AF147E284CA10F00C2D326 /* AsteroidsListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF147D284CA10F00C2D326 /* AsteroidsListViewModelType.swift */; };
+		78AF1480284CA12300C2D326 /* AsteroidCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF147F284CA12300C2D326 /* AsteroidCellViewModelType.swift */; };
+		78AF1482284CA14900C2D326 /* MeasureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1481284CA14900C2D326 /* MeasureUnit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		78346119284168030072BE03 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		78521EB42842AB5900E82523 /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
 		78521EB72842AC1400E82523 /* AsteroidCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellViewModel.swift; sourceTree = "<group>"; };
+		78AF147D284CA10F00C2D326 /* AsteroidsListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsListViewModelType.swift; sourceTree = "<group>"; };
+		78AF147F284CA12300C2D326 /* AsteroidCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellViewModelType.swift; sourceTree = "<group>"; };
+		78AF1481284CA14900C2D326 /* MeasureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureUnit.swift; sourceTree = "<group>"; };
 		F10F63F8EC06F6AB48BAF0A0 /* Pods-Armageddon 2022.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Armageddon 2022.release.xcconfig"; path = "Target Support Files/Pods-Armageddon 2022/Pods-Armageddon 2022.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +108,7 @@
 				78346119284168030072BE03 /* MainTabBarController.swift */,
 				78346116284165000072BE03 /* ViewControllers */,
 				78146DCB28426DDD00242153 /* Views */,
+				78AF147C284CA0FD00C2D326 /* Protocols */,
 				78146DC82842266300242153 /* Helpers */,
 				78521EB62842AB6400E82523 /* Models */,
 				78346115284164E60072BE03 /* Resources */,
@@ -150,8 +157,18 @@
 			isa = PBXGroup;
 			children = (
 				78521EB42842AB5900E82523 /* Asteroid.swift */,
+				78AF1481284CA14900C2D326 /* MeasureUnit.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		78AF147C284CA0FD00C2D326 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				78AF147D284CA10F00C2D326 /* AsteroidsListViewModelType.swift */,
+				78AF147F284CA12300C2D326 /* AsteroidCellViewModelType.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		CED16BB61342A728B26CB455 /* Frameworks */ = {
@@ -282,8 +299,11 @@
 				78146DCA2842267000242153 /* Log.swift in Sources */,
 				78521EB82842AC1400E82523 /* AsteroidCellViewModel.swift in Sources */,
 				78521EB52842AB5900E82523 /* Asteroid.swift in Sources */,
+				78AF1482284CA14900C2D326 /* MeasureUnit.swift in Sources */,
 				78146DC72842227D00242153 /* AsteroidsListViewModel.swift in Sources */,
 				7834611A284168030072BE03 /* MainTabBarController.swift in Sources */,
+				78AF1480284CA12300C2D326 /* AsteroidCellViewModelType.swift in Sources */,
+				78AF147E284CA10F00C2D326 /* AsteroidsListViewModelType.swift in Sources */,
 				78346102284163A30072BE03 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

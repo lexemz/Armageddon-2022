@@ -7,19 +7,6 @@
 
 import UIKit
 
-protocol AsteroidsListViewModelType {
-    var dangeroudsOnly: Bool { get }
-    var measureUnit: MeasureUnit { get }
-    
-    func toggleDangerousOnly()
-    func changeMeasureUnit(_ unit: MeasureUnit)
-    func fetchAsteroids(completion: @escaping () -> Void)
-    
-    // Data Source
-    func numberOfItems() -> Int
-    func cellViewModel(at indexPath: IndexPath) -> AsteroidCellViewModelType
-}
-
 class AsteroidsListViewModel: AsteroidsListViewModelType {
     var measureUnit: MeasureUnit = .kilometers
     var dangeroudsOnly: Bool = false
@@ -52,7 +39,3 @@ extension AsteroidsListViewModel {
     }
 }
 
-enum MeasureUnit {
-    case kilometers
-    case lunarOrbits
-}
