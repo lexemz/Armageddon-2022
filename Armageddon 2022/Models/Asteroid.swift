@@ -10,7 +10,7 @@ import Foundation
 struct Asteroid {
     let name: String
     let diametr: Double
-    let arrivalDate: String
+    let arrivalDate: Date
     let arrivalDistance: Double
     let isDangerous: Bool
 }
@@ -21,31 +21,18 @@ extension Asteroid {
             Asteroid(
                 name: "2021 FQ",
                 diametr: 250,
-                arrivalDate: "06-09-2022",
+                arrivalDate: Date(timeIntervalSince1970: 1655082000),
                 arrivalDistance: 3321,
                 isDangerous: true
             ),
             Asteroid(
                 name: "2022 QQ",
                 diametr: 85,
-                arrivalDate: "20-06-2022",
+                arrivalDate: Date(timeIntervalSince1970: 1655168400),
                 arrivalDistance: 112,
                 isDangerous: false
-            ),
-            Asteroid(
-                name: "2023 QQ",
-                diametr: 300,
-                arrivalDate: "22-06-2022",
-                arrivalDistance: 140,
-                isDangerous: false
-            ),
-            Asteroid(
-                name: "2023 QQ",
-                diametr: 1200,
-                arrivalDate: "14-08-2022",
-                arrivalDistance: 140,
-                isDangerous: true
-            ),
+            )
         ]
     }
+    
 }
