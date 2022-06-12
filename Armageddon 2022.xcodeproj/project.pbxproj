@@ -19,6 +19,7 @@
 		7834611A284168030072BE03 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78346119284168030072BE03 /* MainTabBarController.swift */; };
 		78521EB52842AB5900E82523 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521EB42842AB5900E82523 /* Asteroid.swift */; };
 		78521EB82842AC1400E82523 /* AsteroidCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521EB72842AC1400E82523 /* AsteroidCellViewModel.swift */; };
+		7872CDF028563784001A3CBE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7872CDEF28563784001A3CBE /* NetworkService.swift */; };
 		78AF147E284CA10F00C2D326 /* AsteroidsListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF147D284CA10F00C2D326 /* AsteroidsListViewModelType.swift */; };
 		78AF1480284CA12300C2D326 /* AsteroidCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF147F284CA12300C2D326 /* AsteroidCellViewModelType.swift */; };
 		78AF1482284CA14900C2D326 /* MeasureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1481284CA14900C2D326 /* MeasureUnit.swift */; };
@@ -43,6 +44,7 @@
 		78346119284168030072BE03 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		78521EB42842AB5900E82523 /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
 		78521EB72842AC1400E82523 /* AsteroidCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellViewModel.swift; sourceTree = "<group>"; };
+		7872CDEF28563784001A3CBE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		78AF147D284CA10F00C2D326 /* AsteroidsListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsListViewModelType.swift; sourceTree = "<group>"; };
 		78AF147F284CA12300C2D326 /* AsteroidCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellViewModelType.swift; sourceTree = "<group>"; };
 		78AF1481284CA14900C2D326 /* MeasureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureUnit.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				78146DCB28426DDD00242153 /* Views */,
 				78AF147C284CA0FD00C2D326 /* Protocols */,
 				78AF148E284CD2D800C2D326 /* Controllers */,
+				7872CDEE28563764001A3CBE /* Services */,
 				78146DC82842266300242153 /* Helpers */,
 				78521EB62842AB6400E82523 /* Models */,
 				78346115284164E60072BE03 /* Resources */,
@@ -167,6 +170,14 @@
 				78AF1485284CAFBF00C2D326 /* Colors.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7872CDEE28563764001A3CBE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7872CDEF28563784001A3CBE /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		78AF147C284CA0FD00C2D326 /* Protocols */ = {
@@ -336,6 +347,7 @@
 				78AF148D284CD21500C2D326 /* DestructionListViewController.swift in Sources */,
 				78AF1482284CA14900C2D326 /* MeasureUnit.swift in Sources */,
 				78146DC72842227D00242153 /* AsteroidsListViewModel.swift in Sources */,
+				7872CDF028563784001A3CBE /* NetworkService.swift in Sources */,
 				7834611A284168030072BE03 /* MainTabBarController.swift in Sources */,
 				78AF1484284CA8B100C2D326 /* AsteroidCellViewModelDelegate.swift in Sources */,
 				78AF1480284CA12300C2D326 /* AsteroidCellViewModelType.swift in Sources */,
