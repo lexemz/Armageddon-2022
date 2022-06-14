@@ -20,6 +20,7 @@
 		78521EB52842AB5900E82523 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521EB42842AB5900E82523 /* Asteroid.swift */; };
 		78521EB82842AC1400E82523 /* AsteroidCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521EB72842AC1400E82523 /* AsteroidCellViewModel.swift */; };
 		7872CDF028563784001A3CBE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7872CDEF28563784001A3CBE /* NetworkService.swift */; };
+		7872CE1628567365001A3CBE /* AsteroidsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7872CE1528567365001A3CBE /* AsteroidsJSON.swift */; };
 		78AF147E284CA10F00C2D326 /* AsteroidsListViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF147D284CA10F00C2D326 /* AsteroidsListViewModelType.swift */; };
 		78AF1480284CA12300C2D326 /* AsteroidCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF147F284CA12300C2D326 /* AsteroidCellViewModelType.swift */; };
 		78AF1482284CA14900C2D326 /* MeasureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF1481284CA14900C2D326 /* MeasureUnit.swift */; };
@@ -45,6 +46,7 @@
 		78521EB42842AB5900E82523 /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
 		78521EB72842AC1400E82523 /* AsteroidCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellViewModel.swift; sourceTree = "<group>"; };
 		7872CDEF28563784001A3CBE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		7872CE1528567365001A3CBE /* AsteroidsJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidsJSON.swift; sourceTree = "<group>"; };
 		78AF147D284CA10F00C2D326 /* AsteroidsListViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsListViewModelType.swift; sourceTree = "<group>"; };
 		78AF147F284CA12300C2D326 /* AsteroidCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCellViewModelType.swift; sourceTree = "<group>"; };
 		78AF1481284CA14900C2D326 /* MeasureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureUnit.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				78521EB42842AB5900E82523 /* Asteroid.swift */,
+				7872CE1528567365001A3CBE /* AsteroidsJSON.swift */,
 				78AF1481284CA14900C2D326 /* MeasureUnit.swift */,
 				78AF1485284CAFBF00C2D326 /* Colors.swift */,
 			);
@@ -340,6 +343,7 @@
 				783461182841651A0072BE03 /* AsteroidsListViewController.swift in Sources */,
 				78346100284163A30072BE03 /* AppDelegate.swift in Sources */,
 				78146DCD28426E0C00242153 /* AsteroidCellView.swift in Sources */,
+				7872CE1628567365001A3CBE /* AsteroidsJSON.swift in Sources */,
 				78AF1486284CAFBF00C2D326 /* Colors.swift in Sources */,
 				78146DCA2842267000242153 /* Log.swift in Sources */,
 				78521EB82842AC1400E82523 /* AsteroidCellViewModel.swift in Sources */,
